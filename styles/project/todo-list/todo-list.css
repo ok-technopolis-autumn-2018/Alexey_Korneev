@@ -1,0 +1,57 @@
+.todo-list {
+  min-height: 345px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+  .todo-list_item {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 16px;
+    }
+
+    .todo-list_item:after {
+      content: '';
+      clear: both;
+      display: table;
+      }
+
+    .todo-list_item_ready-marker {
+      float: left;
+      margin-right: 16px;
+      }
+
+    .todo-list_item_remove {
+      float: right;
+      margin-left: 16px;
+      visibility: hidden;
+      }
+
+    .todo-list_item:hover {
+      background-color: #fafafa;
+      }
+
+    .todo-list_item:hover .todo-list_item_remove {
+      visibility: visible;
+      }
+
+    .todo-list_item:hover .custom-checkbox_visual {
+      border: 1px solid #ccc;
+      }
+
+    .todo-list_item:hover .custom-checkbox_target:checked ~ .custom-checkbox_visual {
+      border: 1px solid #5dc2af;
+      }
+
+    .todo-list_item_text-w {
+      overflow: hidden;
+      }
+
+      .todo-list_item_text {
+        width: 100%;
+        color: #666;
+        }
+
+        .todo-list_item.__checked .todo-list_item_text {
+          text-decoration: line-through;
+          color: #ccc;
+          }
