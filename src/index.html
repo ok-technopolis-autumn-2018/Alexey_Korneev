@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhatToDO</title>
+</head>
+<body>
+
+<div class="main-layout">
+    <h1 class="todo-title">todos</h1>
+
+    <div class="todo-board __has-content">
+
+        <form class="todo-creator">
+            <button class="todo-creator_check-all" aria-label="Check all items as done"></button>
+            <div class="todo-creator_text-input-w">
+                <input class="todo-creator_text-input" type="text" placeholder="New todo name"
+                       aria-label="Input new todo text"/>
+            </div>
+        </form>
+
+        <div class="todo-list"></div>
+
+        <div class="todo-toolbar">
+            <div class="todo-toolbar_unready-counter">0 items left</div>
+            <div class="filters todo-toolbar_filters">
+                <button class="filters-item __All __selected" aria-label="Filter: All, is selected">All</button>
+                <button class="filters-item __Active" aria-label="Filter: Active">Active</button>
+                <button class="filters-item __Completed" aria-label="Filter: Completed">Completed</button>
+            </div>
+            <button class="todo-toolbar_clear-completed">Clear completed</button>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
