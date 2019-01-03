@@ -1,57 +1,79 @@
 .todo-list {
-  min-height: 345px;
-  border-top: 1px solid #e6e6e6;
-  border-bottom: 1px solid #e6e6e6;
+
 }
 
-  .todo-list_item {
-    border-bottom: 1px solid #e6e6e6;
-    padding: 16px;
-    }
+.todo-list_item {
+  padding: 16px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: -1px;
+}
 
-    .todo-list_item:after {
-      content: '';
-      clear: both;
-      display: table;
-      }
+.todo-list_item.__is-hidden {
+  display: none;
+  content: '';
+}
 
-    .todo-list_item_ready-marker {
-      float: left;
-      margin-right: 16px;
-      }
+.todo-list_item.__is-checked .todo-list_item_text {
+  text-decoration: line-through;
+  color: #ccc;
+}
 
-    .todo-list_item_remove {
-      float: right;
-      margin-left: 16px;
-      visibility: hidden;
-      }
+.todo-list_item:before,
+.todo-list_item:after {
+  content: '';
+  clear: both;
+  display: block;
+}
 
-    .todo-list_item:hover {
-      background-color: #fafafa;
-      }
+.todo-list_item_ready-marker {
+  float: left;
+  margin-right: 12px;
+}
 
-    .todo-list_item:hover .todo-list_item_remove {
-      visibility: visible;
-      }
+.todo-list_item_text-w {
+  overflow: hidden;
+  margin-top: 4px;
 
-    .todo-list_item:hover .custom-checkbox_visual {
-      border: 1px solid #ccc;
-      }
+}
 
-    .todo-list_item:hover .custom-checkbox_target:checked ~ .custom-checkbox_visual {
-      border: 1px solid #5dc2af;
-      }
+.todo-list_item_text {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  font-style: normal;
+  width: 100%;
+  height: 36px;
+  resize: none;
+  border: 0;
+}
 
-    .todo-list_item_text-w {
-      overflow: hidden;
-      }
+.todo-list_item_remove {
+  float: right;
+  margin: 12px 12px 12px 16px;
+  visibility: hidden;
+  height: 18px;
+  width: 18px;
+  background: url("../../../images/close.png") no-repeat 0 0;
+  border: 0;
+}
 
-      .todo-list_item_text {
-        width: 100%;
-        color: #666;
-        }
+.todo-list_item_remove:focus {
+  border: 0;
+}
 
-        .todo-list_item.__checked .todo-list_item_text {
-          text-decoration: line-through;
-          color: #ccc;
-          }
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 120dpi),
+(min-resolution: 1.5dppx) {
+  .todo-list_item_remove {
+    background: url("../../../images/close@2x.png") no-repeat 0 0;
+    width: 34px;
+    height: 34px;
+    margin-top: 2px;
+    margin-left: 8px;
+  }
+}
+
+.todo-list_item:hover .todo-list_item_remove {
+  visibility: visible;
+}
